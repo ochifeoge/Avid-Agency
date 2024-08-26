@@ -1,0 +1,199 @@
+/* #hero {
+  transform: translateY(10%);
+} */
+.glass {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border-radius: 15px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Blur effect for the glassmorphism look */
+  padding: 20px; /* Add some padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+  color: white; /* Text color to ensure readability */
+  text-align: center; /* Center the text */
+}
+.hero-text {
+  color: #fff;
+
+  margin: 0 auto;
+}
+.hero-text strong {
+  color: #c0c0c0;
+}
+
+#main {
+  height: 60vh;
+}
+.main {
+  transform: translateY(50%);
+}
+.main-icon i {
+  color: gold;
+}
+.main-text::before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: #c0c0c0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cta:nth-child(2) {
+}
+.video {
+  width: 30%;
+  border: 10px solid #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: -20px;
+  z-index: 3;
+}
+.video video {
+  width: 100%;
+  border-top-left-radius: 20px;
+}
+/* 
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(4, 9, 30, 0.7)),
+    url(/assets/slider-2-image_1_jpg-1536x720.jpg);
+  background-repeat: no-repeat;
+  height: 95dvh;
+  border-radius: 40px;
+}
+ */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+.swiper-slide.one {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(4, 9, 30, 0.7)),
+    url(/assets/Home-2-Slider-3-1536x720.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide.two {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(4, 9, 30, 0.7)),
+    url(/assets/AV.png);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  z-index: 42;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  transition: 0.3s;
+}
+header.scrolled {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(15px); /* Blur effect for the glassmorphism look */
+  padding: 20px; /* Add some padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+  transition: 0.3s ease-in-out;
+}
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo {
+  color: white;
+  font-weight: 400;
+  line-height: 120px;
+  height: 120px;
+  font-size: 20px;
+  margin-right: 1.5rem;
+  font-family: serif;
+}
+.logo span {
+  color: blue;
+}
+header.scrolled .logo {
+  line-height: 80px;
+  height: 80px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+
+  list-style: none;
+}
+.menu a {
+  text-decoration: none;
+  color: #c0c0c0;
+  opacity: 0.5;
+  transition: 0.3s all;
+}
+header.scrolled .menu a {
+  color: black;
+}
+.menu a:hover {
+  opacity: 1;
+  font-weight: bolder;
+}
+
+.filter-btns {
+  min-width: 200px;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.methods {
+  height: 45dvh;
+  width: 100%;
+}
+
+.cndm {
+  text-decoration: none;
+}
+
+@media (max-width: 911px) {
+  .swiper-slide {
+    height: 45dvh;
+  }
+  #main {
+    height: 35vh;
+  }
+  .methods {
+    height: 25dvh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    display: none;
+  }
+  .main {
+    transform: translateY(25%);
+  }
+  #main {
+    height: 49vh;
+  }
+}
