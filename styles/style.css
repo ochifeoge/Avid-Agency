@@ -181,7 +181,7 @@ header.scrolled .menu a {
     height: 35vh;
   }
   .methods {
-    height: 25dvh;
+    min-height: 35dvh;
     width: 100%;
   }
 }
