@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+#hero .img-fluid {
+  max-height: 450px;
+}
+.main-icon i {
+  color: gold;
+}
+.main-text::before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: #c0c0c0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.swip-hero img {
+  position: relative;
+}
+.swip-hero img:hover {
+  cursor: pointer;
+}
+.swip-hero .icons {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swip-hero .icons i {
+  color: aquamarine;
+  font-size: 1.1rem;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.swip-hero:hover .swip-hero .icons {
+  transform: translate(50%, 50%);
+  backdrop-filter: blur(20px);
+}
+#services .card-img-top {
+  height: 220px;
+}
+
+.testimonial {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+}
+.swiperT {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 20px;
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+.swiper-slideT {
+  padding: 0 2.5rem;
+}
+.client {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.profil-pic {
+  width: 100%;
+}
+.client h4 {
+  text-transform: capitalize;
+  font-weight: 500;
+
+  margin-bottom: 0.3rem;
+  font-size: 1.03rem;
+}
+.client h5 {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.swiper-slide .text {
+  display: block;
+  margin: 1.5rem 0;
+  line-height: 32px;
+}
+
+.swiper-pagination-bullet {
+  background-color: blue;
+  width: 9px;
+  height: 9px;
+  cursor: pointer;
+  opacity: 0.3;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+}
+.testimonial-titles {
+  padding-left: 5rem;
+}
+.testimonial-titles > * {
+  color: #fff;
+}
+.background-section {
+  width: 100vw;
+  max-width: 75rem;
+  height: calc(100% + 60px);
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(calc(-50% + 60px));
+  border-bottom-left-radius: 60px;
+  background: linear-gradient(55deg, black 20%, gray 20%);
+  z-index: -1;
+}
+.background-section .person2 {
+  height: 350px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 12;
+}
