@@ -2,15 +2,12 @@ const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
-  speed: 2000,
+  speed: 500,
   autoplay: {
     delay: 5000,
     disableOnInteraction: true,
   },
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
+
   zoom: {
     enabled: true,
   },
@@ -21,6 +18,14 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
 });
+
+const header = document.querySelector(".nav-header");
+
+function scrollAnimation() {
+  header.classList.toggle("glass", window.pageYOffset > 0);
+}
+scrollAnimation();
+window.addEventListener("scroll", scrollAnimation);
 
 // portfolio filter animation
 
