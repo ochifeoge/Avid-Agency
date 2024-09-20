@@ -12,6 +12,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
 
+    <!-- LENTIS SMOOTH SCROOL CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
     <!-- SWIPPER CDN -->
     <link
       rel="stylesheet"
@@ -28,11 +32,63 @@
     <link rel="stylesheet" href="./styles/style3.css" />
   </head>
   <body>
-    <header>
+    <header class="bg-dark text-white d-none d-lg-block">
+      <div class="container-md">
+        <nav
+          class="d-flex align-items-center justify-content-between py-3 fixed-top bg-dark">
+          <ul>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#portfolio">Show Case</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#testimonials">Testimonials</a>
+            </li>
+          </ul>
+          <a class="navbar-brand fs-4" href="index3.html"
+            >AVID <span class="text-primary">AGENCY</span></a
+          >
+          <ul class="p-md last-menu">
+            <li class="nav-item">
+              <a class="" href="about.html">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="" href="pricingplan.html">Pricing plan</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://calendly.com/ochifeoge"
+                target="_blank"
+                class="btn btn-primary book"
+                >book a meeting
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square reveal-header-btn"></i
+              ></a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-5 d-lg-none">
+            <a
+              href="https://calendly.com/ochifeoge"
+              target="_blank"
+              class="btn btn-primary book"
+              >book a meeting
+              <i
+                class="fa-solid fa-arrow-up-right-from-square reveal-header-btn"></i
+            ></a>
+            <i class="fs-4 fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <header class="d-lg-none">
       <nav
         class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top text-uppercase">
         <div class="container nav-header">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand fs-4" href="#"
             >AVID <span class="text-primary">AGENCY</span></a
           >
           <button
@@ -62,29 +118,33 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#home">Home</a>
+                  <a class="" href="about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#about">About Us</a>
+                  <a class="" href="#services">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#services">Services</a>
+                  <a class="" href="#testimonials">Show Case</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#testimonials">Show Case</a>
+                  <a class="" aria-current="page" href="#testimonials"
+                    >Testimonials</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pricingplan.html">Pricing plan</a>
+                  <a class="" href="pricingplan.html">Pricing plan</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="https://calendly.com/ochifeoge"
+                    target="_blank"
+                    class="btn btn-primary"
+                    >book a meeting
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square reveal-header-btn"></i
+                  ></a>
                 </li>
               </ul>
-              <a
-                href="calendly.com/ochifeoge"
-                target="_blank"
-                class="btn btn-primary"
-                >book a meeting
-                <i
-                  class="fa-solid fa-arrow-up-right-from-square reveal-header-btn"></i
-              ></a>
             </div>
           </div>
         </div>
@@ -92,17 +152,40 @@
     </header>
     <main>
       <section id="hero" class="bg-dark text-white">
-        <div class="container">
-          <h1 class="m-0">
+        <div class="container mt-5">
+          <h1 class="mb-2">
             Revolutionize Your Social Media -
             <strong class="text-primary">Tailored</strong> Strategies for Real
             Results
           </h1>
           <div class="row align-items-center justify-content-between">
             <div class="col-lg-6 mt-3 mt-md-0">
-              <a href="#contact" class="btn btn-primary mb-2 mb-md-0"
+              <p>
+                Avid Agency has a core focus in working with various business
+                just like yours. Using proven methods, we deliver impecable
+                services, results, and business growth for our clients, Ready to
+                learn more?
+              </p>
+              <a
+                href="#contact"
+                class="btn btn-primary mb-2 mb-md-0 js-toggle-free"
                 >GET A FREE GUIDE
               </a>
+              <div class="free-guide display mt-2">
+                <form
+                  action="https://formspree.io/f/xanwbprz"
+                  method="POST"
+                  class="d-flex align-items-center">
+                  <input
+                    placeholder="The free pdf would be sent to your email"
+                    type="email"
+                    name="email"
+                    class="form-control js-form-message"
+                    id="InputEmail1"
+                    aria-describedby="emailHelp" />
+                  <button class="btn btn-primary">Send</button>
+                </form>
+              </div>
               <div class="d-flex flex-column mt-lg-5">
                 <div class="d-flex gap-1">
                   <span class="text-primary">
@@ -182,23 +265,66 @@
       </section>
 
       <div class="container">
-        <div class="row">
-          <div class="col-md-4">
+        <div class="row align-items-center">
+          <div class="col-md-4 el-in-vh mb-sm-2">
             <h5 class="text-muted">Trusted by fast moving brands worldwide</h5>
             <div class="d-flex gap-3">
               <div class="d-flex flex-column justify-content-center">
-                <h3 class="m-0 h3">107<span class="text-primary">+</span></h3>
-                <span class="fs-6 fw-light">Clients World Wide</span>
+                <h3 class="m-0 h3 text-primary">
+                  <span data-target-number="103" class="number-count text-dark"
+                    >0</span
+                  >+
+                </h3>
+                <span class="fs-6 fw-medium">Clients World Wide</span>
               </div>
 
               <div class="d-flex flex-column justify-content-center">
-                <h3 class="m-0 h3">97<span class="text-primary">+</span></h3>
-                <span class="fs-6 fw-light">Completed Projects</span>
+                <h3 class="m-0 h3 text-primary">
+                  <span data-target-number="97" class="number-count text-dark"
+                    >0</span
+                  >+
+                </h3>
+                <span class="fs-6 fw-medium">Completed Projects</span>
               </div>
             </div>
           </div>
 
-          <div class="col-fluid"></div>
+          <div
+            class="col-md-8 slider"
+            style="--width: 100px; --height: 50px; --quantity: 10">
+            <div class="list">
+              <div class="item" style="--position: 1">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+              <div class="item" style="--position: 2">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+              <div class="item" style="--position: 3">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+              <div class="item" style="--position: 4">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+              <div class="item" style="--position: 5">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+              <div class="item" style="--position: 6">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+              <div class="item" style="--position: 7">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+              <div class="item" style="--position: 8">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+              <div class="item" style="--position: 9">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+              <div class="item" style="--position: 10">
+                <img src="assets/portfolio1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -216,7 +342,7 @@
                   class="card-img-top rounded"
                   alt="..." />
                 <div class="card-body px-3">
-                  <p class="small">
+                  <p class="fw-bold">
                     Taking charge of the social media pages of our clients and
                     ensuring their content reach the right audience therefore
                     increasing their social media presence.
@@ -231,7 +357,7 @@
                   class="card-img-top rounded"
                   alt="..." />
                 <div class="card-body px-3">
-                  <p class="small">
+                  <p class="fw-bold">
                     Helping our clients advertise their products and services on
                     the appropriate channels that would be paid for.
                   </p>
@@ -246,7 +372,7 @@
                   alt="..." />
                 <div class="card-body px-3">
                   <h5 class="card-title fs-5">Customer Service</h5>
-                  <p class="small">
+                  <p class="fw-bold">
                     Consultation services to clients who want insights on how to
                     run their business socially.
                   </p>
@@ -260,7 +386,7 @@
                   class="card-img-top rounded"
                   alt="..." />
                 <div class="card-body px-3">
-                  <p class="small">
+                  <p class="fw-bold">
                     Edit video content for our clients to be posted on their
                     social media accounts audience therefore increasing their
                     social media presence.
@@ -275,7 +401,7 @@
                   class="card-img-top rounded"
                   alt="..." />
                 <div class="card-body px-3">
-                  <p class="small">
+                  <p class="fw-bold">
                     Create impressive graphic content and logo’s for all our
                     clients and clients who demand it.
                   </p>
@@ -290,7 +416,7 @@
                   alt="..." />
                 <div class="card-body px-3">
                   <h5 class="card-title fs-5">Calander Content</h5>
-                  <p class="small">
+                  <p class="fw-bold">
                     create a carefully curated content calendar to guide the
                     putting up of contents on our clients page in respect to
                     what their respective consumer wants to know about their
@@ -306,7 +432,7 @@
                   class="card-img-top rounded"
                   alt="..." />
                 <div class="card-body px-3">
-                  <p class="small">
+                  <p class="fw-bold">
                     Help to advertise our clients and their services via E-mail
                     CAC Registration Services
                   </p>
@@ -321,7 +447,7 @@
                   alt="..." />
                 <div class="card-body px-3">
                   <h5 class="card-title fs-5">Auditing Of Socials</h5>
-                  <p class="small">
+                  <p class="fw-bold">
                     Audit social media accounts and ensure our clients page is
                     optimized in order to increase their online presence.
                   </p>
@@ -514,15 +640,6 @@
         <div class="container">
           <h3 class="text-center text-uppercase py-3">
             What Our Clients Are Saying
-            <span>
-              <div class="text-center" style="color: gold">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </span>
           </h3>
           <h5 class="text-muted text-center">
             Hear from the businesses that have seen success with our social
@@ -559,6 +676,15 @@
                     elit.abore odio odit? Deleniti, quas velit dicta earum nemo
                     quis ex libero hic dolore consectetur eaque atque!</q
                   >
+                  <span>
+                    <div class="text-center" style="color: gold">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </span>
                 </div>
                 <div class="swiper-slide swiper-slideT">
                   <div class="client">
@@ -584,6 +710,15 @@
                     aliquam modi debitis, dolores labore odio odit? Deleniti,
                     quas velit dicta earum n!</q
                   >
+                  <span>
+                    <div class="text-center" style="color: gold">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </span>
                 </div>
                 <div class="swiper-slide swiper-slideT">
                   <div class="client">
@@ -610,6 +745,15 @@
                     quas velit dicta earum nemo quis ex libero hic dolore
                     consectetur eaque atque!</q
                   >
+                  <span>
+                    <div class="text-center" style="color: gold">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </span>
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -809,18 +953,18 @@
 
       <!-- CONTACT -->
       <section class="my-3">
-        <div class="container">
+        <div class="container p-4">
+          <h2 class="fw-medium mb-3 pb-5">Contact Us</h2>
           <div class="row">
-            <h2 class="fw-light">Contact Us</h2>
-            <div class="col-lg-6">
+            <div class="col-lg-5">
               <div class="d-flex flex-column gap-4">
                 <div class="d-flex align-items-center gap-2">
                   <div><i class="fa-solid fa-map"></i></div>
-                  <p class="m-0">We work remotely</p>
+                  <p class="m-0 fs-5">We work remotely</p>
                 </div>
                 <div class="d-flex align-items-center gap-2">
                   <div><i class="fa-solid fa-clock"></i></div>
-                  <p class="m-0">Monday to sunday open all hours</p>
+                  <p class="m-0 fs-5">Monday to sunday open all hours</p>
                 </div>
                 <div class="d-flex align-items-center gap-2">
                   <div>
@@ -828,7 +972,7 @@
                       ><i class="fa-solid fa-envelope"></i
                     ></a>
                   </div>
-                  <p class="m-0">avid@agency.com</p>
+                  <p class="m-0 fs-5">avid@agency.com</p>
                 </div>
                 <div class="d-flex align-items-center gap-2">
                   <div>
@@ -836,7 +980,7 @@
                       ><i class="fa-solid fa-phone"></i
                     ></a>
                   </div>
-                  <p class="m-0">+234 9053 3434 322</p>
+                  <p class="m-0 fs-5">+234 9053 3434 322</p>
                 </div>
 
                 <div class="fs-5 d-flex gap-2">
@@ -936,9 +1080,15 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
+    <!-- GSAP JS CDN -->
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- LENTIS SMOOTH SCROOL -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <!-- SWIPPER JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/scripts/mixitup.min.js"></script>
-    <script src="/scripts/app3.js"></script>
+    <script src="./scripts/mixitup.min.js"></script>
+    <script src="./scripts/app3.js"></script>
   </body>
 </html>

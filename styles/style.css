@@ -1,6 +1,32 @@
 /* #hero {
   transform: translateY(10%);
 } */
+
+/* menu*/
+header ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+}
+header ul a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: all.3s ease-in;
+}
+header ul a:hover {
+  text-shadow: 0 0 5px #0d6efd, 0 0 10px #0d6efd, 0 0 15px #0d6efd,
+    0 0 20px #0d6efd, 0 0 25px #0d6efd;
+  opacity: 1;
+}
+.book {
+  opacity: 1;
+}
+
 .glass {
   background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
   border-radius: 15px; /* Rounded corners */
@@ -187,9 +213,6 @@ header.scrolled .menu a {
 }
 
 @media (max-width: 450px) {
-  header {
-    display: none;
-  }
   .main {
     transform: translateY(25%);
   }

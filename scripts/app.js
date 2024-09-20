@@ -1,11 +1,3 @@
-const header = document.querySelector("header");
-
-function scrollAnimation() {
-  header.classList.toggle("scrolled", window.pageYOffset > 0);
-}
-scrollAnimation();
-window.addEventListener("scroll", scrollAnimation);
-
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
