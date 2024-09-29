@@ -112,3 +112,18 @@ window.addEventListener("scroll", scrollAnimation); */
 window.addEventListener("DOMContentLoaded", () => {
   loadPage();
 });
+
+//ABOUT US PAGE
+
+const paraIntro = document.querySelector(".intro");
+
+const toggleBtn = document.querySelector(".js-toggle-about");
+
+toggleBtn.addEventListener("click", () => {
+  paraIntro.classList.toggle("hidden");
+  if (!paraIntro.classList.contains("hidden")) {
+    toggleBtn.innerText = "Read Less";
+  } else {
+    toggleBtn.innerText = "Read More...";
+  }
+});
