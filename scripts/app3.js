@@ -1,22 +1,103 @@
+import { apprasials } from "./comments.js";
 function loadPage() {
-  // LENTIS SMOOTH SCROOLCODE
+  // LENTIS SMOOTH SCROLL CODE
   const lenis = new Lenis();
 
-  lenis.on("scroll", (e) => {
-    console.log(e);
-  });
-
   lenis.on("scroll", ScrollTrigger.update);
-
   gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
   });
 
-  gsap.ticker.lagSmoothing(0);
+  // Show preloader and disable scrolling
+  document.body.classList.add("loading");
+  window.scrollTo(0, 0); // Prevent initial scroll
+
+  // Define the preloader percentage update variables
+  let percent = 0;
+  const percentText = document.getElementById("loader-percent");
+  const preloader = document.querySelector(".preloader");
+
+  // Get total number of images and videos
+  const totalAssets =
+    document.images.length + document.querySelectorAll("video").length;
+  let loadedAssets = 0;
+
+  // Function to update the percentage
+  function updateProgress() {
+    percent = Math.floor((loadedAssets / totalAssets) * 100);
+    percentText.textContent = percent + "%";
+
+    if (percent >= 100) {
+      // Once the loading is complete, trigger GSAP animations
+      document.body.classList.remove("loading");
+      document.body.classList.add("loaded");
+
+      // Start GSAP animations
+      const timeline = gsap.timeline();
+      timeline
+        .from("header", {
+          marginTop: "-100px",
+          opacity: 0,
+          duration: 2,
+          ease: "linear",
+        })
+        .from(".hero-text", {
+          x: -100,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power2.out",
+          delay: 0.5,
+        })
+        .from(".hero-video", {
+          x: 100,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power2.out",
+        })
+        .from(
+          [".animate-text", ".js-toggle-free", ".check-item"], // Select the p, a, and check items
+          {
+            x: -100,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out",
+            stagger: 0.3, // Creates a stagger effect between elements
+          },
+          "+=0.2" // Delay after the video finishes
+        );
+    }
+  }
+
+  // Track asset loading and update the progress
+  function assetLoaded() {
+    loadedAssets += 1;
+    updateProgress();
+  }
+
+  // Track images
+  const assets = document.images;
+  for (let i = 0; i < assets.length; i++) {
+    if (assets[i].complete) {
+      assetLoaded(); // If already loaded
+    } else {
+      assets[i].addEventListener("load", assetLoaded); // Track when each image loads
+      assets[i].addEventListener("error", assetLoaded); // In case the image fails to load
+    }
+  }
+
+  // Track videos
+  const videos = document.querySelectorAll("video");
+  for (let i = 0; i < videos.length; i++) {
+    if (videos[i].readyState >= 3) {
+      // Check if video is already buffered
+      assetLoaded();
+    } else {
+      videos[i].addEventListener("loadeddata", assetLoaded); // When video is ready
+    }
+  }
 
   // SWIPER JS CODE
   const swiper = new Swiper(".swiper", {
-    // Optional parameters
     direction: "horizontal",
     loop: true,
     speed: 500,
@@ -24,46 +105,32 @@ function loadPage() {
       delay: 5000,
       disableOnInteraction: true,
     },
-
     zoom: {
       enabled: true,
     },
-
-    // If we need pagination
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
   });
 
-  /* const header = document.querySelector(".nav-header");
-
-function scrollAnimation() {
-  header.classList.toggle("glass", window.pageYOffset > 0);
-}
-scrollAnimation();
-window.addEventListener("scroll", scrollAnimation); */
-
-  // CODE FOR CLEARING THE FORM AFTER SUBMISSION
-
+  // Clear the form after submission
   function resetInputValue() {
     document.querySelectorAll(".js-form-message").forEach((inputSection) => {
       inputSection.value = "";
     });
   }
 
-  // portfolio filter animation
-
+  // Portfolio filter animation
   let mixer = mixitup(".portfolio-gallery");
 
-  // scroll animation
+  // Scroll animation
   window.addEventListener("scroll", () => {
     if (!play) {
       increamentAnimation();
     }
   });
 
-  // responsible for updating the count from 0 t0 targer number
   function updateCount(startNum, targetNum) {
     let currentNum = +startNum.innerText;
     if (currentNum < targetNum) {
@@ -85,14 +152,12 @@ window.addEventListener("scroll", scrollAnimation); */
     play = true;
     incrementingNumber.forEach((num) => {
       const target = +num.dataset.targetNumber;
-
       setTimeout(() => {
         updateCount(num, target);
       }, 1000);
     });
   }
 
-  // checking if the element has reached the viewport and is visible
   function hasReached() {
     let topPosition = elInView.getBoundingClientRect().top;
     if (window.innerHeight >= topPosition) {
@@ -101,29 +166,34 @@ window.addEventListener("scroll", scrollAnimation); */
   }
 
   // Free Guide
-
   const guideToggle = document.querySelector(".js-toggle-free");
   const guideEl = document.querySelector(".free-guide");
 
   guideToggle.addEventListener("click", () => {
     guideEl.classList.toggle("display");
   });
+
+  // TESTIMONIAL COMMENTS SECTION
+  let html = "";
+  apprasials.forEach((apprasial) => {
+    html += `
+       <div class="swiper-slide swiper-slideT">
+                  <div class="client">
+                    <div class="client-info">
+                      <h4>${apprasial.name}</h4>
+                      <div class="" style="color: gold">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    </div>
+                  </div>
+                  <q class="text">${apprasial.comment}</q>
+                </div>
+    `;
+  });
+  document.querySelector(".js-comments").innerHTML = html;
 }
-window.addEventListener("DOMContentLoaded", () => {
-  loadPage();
-});
-
-//ABOUT US PAGE
-
-const paraIntro = document.querySelector(".intro");
-
-const toggleBtn = document.querySelector(".js-toggle-about");
-
-toggleBtn.addEventListener("click", () => {
-  paraIntro.classList.toggle("hidden");
-  if (!paraIntro.classList.contains("hidden")) {
-    toggleBtn.innerText = "Read Less";
-  } else {
-    toggleBtn.innerText = "Read More...";
-  }
-});
+window.addEventListener("DOMContentLoaded", loadPage);

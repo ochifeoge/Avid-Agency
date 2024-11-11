@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avid Agency</title>
 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+
     <!-- BOOTSTRAP CSS CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -55,7 +71,7 @@
             aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-                logo
+                Menu
               </h5>
               <button
                 type="button"
@@ -92,40 +108,86 @@
       <section class="about-us ms-1 p-3 m-3">
         <div class="container">
           <h1 class="text-center mb-4 opacity-50">Avid Agency</h1>
-          <div class="row align-items-center">
+          <div class="row align-items-center mb-4">
             <div class="col-md-6">
               <img
                 src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt=""
-                class="img-fluid rounded" />
+                class="img-fluid rounded img-left" />
             </div>
-            <div class="col-md-6">
-              <p class="fs-5 my-3 intro hidden">
-                <strong>We</strong> are passionate about helping businesses of
-                all sizes build their brand, grow their online presence, and
-                connect with their audience. Our team of digital marketing
-                experts specializes in creating tailored strategies that drive
-                results across multiple platforms—whether it’s social media
-                management, content creation, video editing, or ads management.
-                We believe in the power of simplicity and transparency. In a
-                world where digital marketing can seem overwhelming, we make it
-                easy for you to understand and manage your online presence. We
-                take the time to learn about your brand, your goals, and your
-                target audience, so we can create custom solutions that truly
-                resonate. From increasing brand awareness to improving customer
-                engagement, we’re here to be your partner in growth. Whether
-                you're a small business or a large enterprise, our services are
-                designed to elevate your digital footprint and bring measurable
-                success to your brand.
-              </p>
-              <button class="btn js-toggle-about">Read More...</button>
-              <p class="fs-5 fw-bold text-center mt-3">
-                Our mission is simple: to help businesses thrive in the digital
-                age with innovative strategies and exceptional service. We
-                believe in building lasting relationships with our clients and
-                providing the tools and expertise needed to succeed in an
-                ever-evolving online landscape.
-              </p>
+            <div class="col-md-6 text-right">
+              <div class="intro">
+                <p class="fs-5 my-3">
+                  Founded by Abijah Victor, Avid Agency is your partner in
+                  navigating the digital landscape. We empower businesses to
+                  focus on their core operations by taking charge of their
+                  digital presence.
+                </p>
+
+                <p class="fs-5 mt-3">
+                  Our Mission At Avid Agency, we believe that every business
+                  deserves to thrive in the digital world. Our mission is to
+                  provide comprehensive digital solutions that allow our clients
+                  to concentrate on what they do best - running and growing
+                  their businesses.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-12 text-right">
+              <h4 class="fw-bold mt-3">Why Choose Avid Agency?</h4>
+
+              <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div
+                    class="rounded shadow px-3 py-5 d-flex flex-column justify-content-center bg-white h-100">
+                    <div
+                      class="d-flex flex-column align-items-center justify-content-center p-2 rounded-circle bg-primary text-white fs-4"
+                      style="width: 40px; height: 40px">
+                      <i class="fa-regular fa-handshake"></i>
+                    </div>
+                    <h2 class="mt-2 fs-4">Expertise</h2>
+                    <p class="mt-2">
+                      Our skilled professionals stay ahead of digital trends to
+                      deliver cutting-edge solutions.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div
+                    class="rounded shadow px-3 py-5 d-flex flex-column justify-content-center bg-white h-100">
+                    <div
+                      class="d-flex flex-column align-items-center justify-content-center p-2 rounded-circle bg-primary text-white fs-4"
+                      style="width: 40px; height: 40px">
+                      <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h2 class="mt-2 fs-4">Client-Focused</h2>
+                    <p class="mt-2">
+                      We tailor our services to your unique business goals and
+                      challenges.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div
+                    class="rounded shadow px-3 py-5 d-flex flex-column justify-content-center bg-white h-100">
+                    <div
+                      class="d-flex flex-column align-items-center justify-content-center p-2 rounded-circle bg-primary text-white fs-4"
+                      style="width: 40px; height: 40px">
+                      <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h2 class="mt-2 fs-4">Results-Driven</h2>
+                    <p class="mt-2">
+                      Our strategies are designed to deliver measurable impact
+                      and growth for your business.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -137,17 +199,23 @@
           <p class="lead text-muted">
             We’re a dynamic group of individuals who are passionate about what
             we do and dedicated to delivering the best results for our clients.
+            Our team of experts handles the complexities of your digital
+            presence, allowing you to focus on production and other crucial
+            aspects of your business.
           </p>
         </div>
         <div class="container py-5">
-          <div class="row align-items-center justify-content-evenly g-5">
+          <div
+            class="row align-items-center justify-content-evenly g-5"
+            style="perspective: 1000px">
             <div
               class="col-md-5 shadow-lg bg-light rounded-4 p-4 ani-about-card">
               <div class="d-flex flex-column gap-3">
                 <div class="about-img">
                   <img
-                    src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                    alt="" />
+                    src="/assets/abijavictor.JPG"
+                    alt="victor abija"
+                    class="victor" />
                 </div>
                 <div class="abt-card">
                   <div class="header">
@@ -155,25 +223,27 @@
                     <p class="text-muted mb-0">Founder / C.E.O</p>
                   </div>
                   <div class="abt-body py-2">
-                    <p class="mb-0 lead fs-5">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Fugiat magnam voluptates, officiis, in rem beatae tenetur
-                      ut earum unde repellat deleniti ducimus.
+                    <p class="mb-0 fs-5">
+                      As Director of Avid Agency, I lead a passionate team
+                      focused on helping brands thrive online through creative
+                      strategies and results-driven solutions. We collaborate
+                      closely with clients to deliver exceptional value and
+                      impactful growth
                     </p>
                   </div>
                   <div class="abt-socials d-flex gap-2">
                     <a
-                      href="http://"
+                      href="https://x.com/VictorAbijah"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="btn fs-4"
                       ><i class="fa-brands fa-x-twitter"></i
                     ></a>
                     <a
-                      href="http://"
+                      href="https://www.linkedin.com/company/avidagencyy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="opacity-50 btn fs-4"
+                      class="btn fs-4"
                       ><i class="fa-brands fa-linkedin"></i
                     ></a>
                   </div>
@@ -184,37 +254,20 @@
               class="col-md-5 shadow-lg bg-light rounded-4 p-4 ani-about-card">
               <div class="d-flex flex-column gap-3">
                 <div class="about-img">
-                  <img
-                    src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                    alt="" />
+                  <img src="/assets/okeowoqueen.JPG" alt="okeowo queen" />
                 </div>
                 <div class="abt-card">
                   <div class="header">
-                    <h5 class="mb-0 py-2">Abija Victor</h5>
-                    <p class="text-muted mb-0">Founder / C.E.O</p>
+                    <h5 class="mb-0 py-2">Okeowo Queen</h5>
+                    <p class="text-muted mb-0">Social Media Manager</p>
                   </div>
                   <div class="abt-body py-2">
-                    <p class="mb-0 lead fs-5">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Fugiat magnam voluptates, officiis, in rem beatae tenetur
-                      ut earum unde repellat deleniti ducimus.
+                    <p class="mb-0 fs-5">
+                      As a Social Media Manager at Avid Agency, I craft engaging
+                      content and build strategies that grow brand presence
+                      online. By analyzing trends and engaging with audiences, I
+                      help brands connect and thrive across social platforms.
                     </p>
-                  </div>
-                  <div class="abt-socials d-flex gap-2">
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="btn fs-4"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="opacity-50 btn fs-4"
-                      ><i class="fa-brands fa-linkedin"></i
-                    ></a>
                   </div>
                 </div>
               </div>
@@ -224,36 +277,23 @@
               <div class="d-flex flex-column gap-3">
                 <div class="about-img">
                   <img
-                    src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                    alt="" />
+                    src="/assets/olamideadiesa.jpg"
+                    alt="olamide adiesa"
+                    class="olamide" />
                 </div>
                 <div class="abt-card">
                   <div class="header">
-                    <h5 class="mb-0 py-2">Abija Victor</h5>
-                    <p class="text-muted mb-0">Founder / C.E.O</p>
+                    <h5 class="mb-0 py-2">Olamide Adiesa</h5>
+                    <p class="text-muted mb-0">Virtual Assistant</p>
                   </div>
                   <div class="abt-body py-2">
-                    <p class="mb-0 lead fs-5">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Fugiat magnam voluptates, officiis, in rem beatae tenetur
-                      ut earum unde repellat deleniti ducimus.
+                    <p class="mb-0 fs-5">
+                      As a Virtual Assistant at Avid Agency, I provide essential
+                      support to streamline operations and enhance efficiency.
+                      From managing tasks to coordinating schedules, I ensure
+                      smooth day-to-day operations, allowing the team to focus
+                      on driving success.
                     </p>
-                  </div>
-                  <div class="abt-socials d-flex gap-2">
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="btn fs-4"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="opacity-50 btn fs-4"
-                      ><i class="fa-brands fa-linkedin"></i
-                    ></a>
                   </div>
                 </div>
               </div>
@@ -263,36 +303,45 @@
               <div class="d-flex flex-column gap-3">
                 <div class="about-img">
                   <img
-                    src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                    alt="" />
+                    src="/assets/JIM-GEORGE T. DIVINE.jpg"
+                    alt="JIM-GEORGE"
+                    class="jim" />
                 </div>
                 <div class="abt-card">
                   <div class="header">
-                    <h5 class="mb-0 py-2">Abija Victor</h5>
-                    <p class="text-muted mb-0">Founder / C.E.O</p>
+                    <h5 class="mb-0 py-2">JIM-GEORGE DIVINE</h5>
+                    <p class="text-muted mb-0">Video Editor</p>
                   </div>
                   <div class="abt-body py-2">
-                    <p class="mb-0 lead fs-5">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Fugiat magnam voluptates, officiis, in rem beatae tenetur
-                      ut earum unde repellat deleniti ducimus.
+                    <p class="mb-0 fs-5">
+                      As a Video Editor at Avid Agency, I craft compelling
+                      visual stories that engage audiences and elevate brands.
+                      With a focus on creativity and precision, I bring ideas to
+                      life through seamless editing, ensuring every project
+                      delivers a lasting impact.
                     </p>
                   </div>
-                  <div class="abt-socials d-flex gap-2">
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="btn fs-4"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="opacity-50 btn fs-4"
-                      ><i class="fa-brands fa-linkedin"></i
-                    ></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-5 shadow-lg bg-light rounded-4 p-4 ani-about-card">
+              <div class="d-flex flex-column gap-3">
+                <div class="about-img">
+                  <img src="/assets/dayoosho.jpeg" alt="daho osho" />
+                </div>
+                <div class="abt-card">
+                  <div class="header">
+                    <h5 class="mb-0 py-2">DAYO OSHO</h5>
+                    <p class="text-muted mb-0">Ads Specialist</p>
+                  </div>
+                  <div class="abt-body py-2">
+                    <p class="mb-0 fs-5">
+                      As an Ads Specialist at Avid Agency, I create data-driven
+                      advertising strategies that drive results. By optimizing
+                      campaigns and targeting the right audiences, I help brands
+                      grow their reach and achieve measurable success.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -302,75 +351,22 @@
               <div class="d-flex flex-column gap-3">
                 <div class="about-img">
                   <img
-                    src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                    alt="" />
+                    src="/assets/ochifeogechukwu.jpg"
+                    alt="ochife oge"
+                    class="ochife" />
                 </div>
                 <div class="abt-card">
                   <div class="header">
-                    <h5 class="mb-0 py-2">Abija Victor</h5>
-                    <p class="text-muted mb-0">Founder / C.E.O</p>
+                    <h5 class="mb-0 py-2">Ochife Ogechukwu</h5>
+                    <p class="text-muted mb-0">Web Developer</p>
                   </div>
                   <div class="abt-body py-2">
-                    <p class="mb-0 lead fs-5">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Fugiat magnam voluptates, officiis, in rem beatae tenetur
-                      ut earum unde repellat deleniti ducimus.
+                    <p class="mb-0 fs-5">
+                      As a Web Developer at Avid Agency, I build dynamic,
+                      user-friendly websites that deliver seamless experiences.
+                      I focus on creating innovative solutions that help brands
+                      stand out and engage their audience effectively online.
                     </p>
-                  </div>
-                  <div class="abt-socials d-flex gap-2">
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="btn fs-4"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="opacity-50 btn fs-4"
-                      ><i class="fa-brands fa-linkedin"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-md-5 shadow-lg bg-light rounded-4 p-4 ani-about-card">
-              <div class="d-flex flex-column gap-3">
-                <div class="about-img">
-                  <img
-                    src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                    alt="" />
-                </div>
-                <div class="abt-card">
-                  <div class="header">
-                    <h5 class="mb-0 py-2">Abija Victor</h5>
-                    <p class="text-muted mb-0">Founder / C.E.O</p>
-                  </div>
-                  <div class="abt-body py-2">
-                    <p class="mb-0 lead fs-5">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Fugiat magnam voluptates, officiis, in rem beatae tenetur
-                      ut earum unde repellat deleniti ducimus.
-                    </p>
-                  </div>
-                  <div class="abt-socials d-flex gap-2">
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="btn fs-4"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                    <a
-                      href="http://"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="opacity-50 btn fs-4"
-                      ><i class="fa-brands fa-linkedin"></i
-                    ></a>
                   </div>
                 </div>
               </div>
