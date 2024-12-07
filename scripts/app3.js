@@ -115,14 +115,33 @@ function loadPage() {
   });
 
   // Clear the form after submission
-  function resetInputValue() {
+
+  const submitBtns = document.querySelectorAll(".js-submit-btn");
+
+  submitBtns.forEach((submitBtn) => {
+    submitBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const successMessage = document.querySelector(".successMessage");
+
+      successMessage.classList.add("active");
+
+      setTimeout(() => {
+        successMessage.classList.remove("active");
+
+        const form = submitBtn.closest("form"); // Find the form closest to the button
+        form.submit(); // Submit the form
+      }, 5000);
+    });
+  });
+  /*  function resetInputValue() {
     document.querySelectorAll(".js-form-message").forEach((inputSection) => {
       inputSection.value = "";
     });
-  }
+  } */
 
   // Portfolio filter animation
-  let mixer = mixitup(".portfolio-gallery");
+  // let mixer = mixitup(".portfolio-gallery");
 
   // Scroll animation
   window.addEventListener("scroll", () => {

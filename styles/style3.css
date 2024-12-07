@@ -173,6 +173,33 @@ header ul a:hover {
 }
 /* FREE GUIDE */
 
+.successMessage{
+  position: fixed;
+  max-height: 0;
+  overflow: hidden;
+  top: 15%;
+  right: 0;
+  z-index: 50;
+  width: 350px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  font-size: 24px;
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  padding: 5px 3px;
+  border-radius: 15px;
+  transform: translateX(150px);
+  
+
+  transition: all 0.4s ease-in-out;
+}
+.successMessage.active{
+  max-height: 200px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transform: translateX(0);
+  background: green;
+}
+
 .free-guide.display {
 
   display: none;
@@ -224,11 +251,26 @@ header ul a:hover {
   overflow: hidden;
 }
 #abt-hero{
+  z-index: 10;
   height: 50vh;
   background: linear-gradient(90deg, rgba(3,2,19,0.3337710084033614) 0%, rgba(29,24,48,0.7287289915966386) 35%), url(https://images.pexels.com/photos/68631/pexels-photo-68631.jpeg?auto=compress&cs=tinysrgb&w=600);
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.img-left {
+  transform: translateX(-300px); /* Start off-screen to the left */
+  opacity: 0; 
+  z-index: 20;
+}
+
+.text-right {
+  transform: translateX(300px); 
+  opacity: 0; 
+}
+.name {
+  transform: translateY(100px); 
+  opacity: 0; 
 }
 .intro{
   line-height: 2rem;
@@ -278,7 +320,7 @@ aspect-ratio: 3/2;
   transition: 0.3s;
 }
 #services .card img {
-  transition: 0.3s;
+  transition: 1s;
 }
 #services .card:hover img {
   transform: scale(1.1);
@@ -286,16 +328,20 @@ aspect-ratio: 3/2;
   cursor: pointer;
 }
 #services .card .card-body {
-  height: 0;
+  max-height: 0;
+  overflow: hidden;
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
 
-  transition: 0.3s all;
+  transition: 1s all;
 }
 #services .card:hover .card-body {
-  height: inherit;
+  max-height: 500px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
 }
 #services .card p {
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 #services .card:hover p {
   opacity: 1;
@@ -331,6 +377,7 @@ aspect-ratio: 3/2;
   align-items: center;
 }
 .swiperT {
+  
   width: 100%;
   height: 330px;
   background-color: white;
@@ -412,7 +459,7 @@ aspect-ratio: 3/2;
   transition: 0.45s;
 }
 .social-icon:hover {
-  transform: translateY(-40%);
+  transform: scale(1.2);
 }
 
 
@@ -440,6 +487,17 @@ aspect-ratio: 3/2;
   50%{background-position:100% 50%}
   100%{background-position:0% 51%}
 }
+
+
+/* PORTFOLIO SHOWCASE SECTION */
+
+.showcase-pic{
+  height: 100vh;
+  background-image: url("../assets/port1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 @media (max-width: 1350px) {
   #hero {
     
@@ -455,6 +513,15 @@ aspect-ratio: 3/2;
   header ul {
   
     gap: 0.5rem;
+    
+}
+@media (max-width:750px) {
+
+  /* for about section */
+  .name {
+    transform: translateY(50px); 
+    opacity: 0; 
+  }
     
 }
 #hero h1{

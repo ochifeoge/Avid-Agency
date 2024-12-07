@@ -1,18 +1,24 @@
 function loadPage() {
-  // Animate image from the left
-  gsap.from(".img-left", {
-    x: -300, // Move image in from the left (-300px off-screen)
-    opacity: 0, // Start with 0 opacity
-    duration: 1.2, // Duration of the animation
-    ease: "power2.out", // Smooth easing effect
+  gsap.to(".name", {
+    y: 0,
+    opacity: 0.5,
+    duration: 1.2,
+
+    ease: "power2.out",
+  });
+  gsap.to(".img-left", {
+    x: 0,
+    opacity: 1,
+    duration: 1.2,
+    ease: "power2.out",
   });
 
   // Animate text from the right
-  gsap.from(".text-right", {
-    x: 300, // Move paragraph in from the right (300px off-screen)
-    opacity: 0, // Start with 0 opacity
+  gsap.to(".text-right", {
+    x: 0, // Move paragraph in from the right (300px off-screen)
+    opacity: 1,
     duration: 1.2, // Match the duration with the image
-    ease: "power2.out", // Smooth easing effect
+    ease: "power2.out",
     delay: 0.2, // Optional: Add a slight delay so they don't animate at the same exact time
   });
 
@@ -38,6 +44,16 @@ function loadPage() {
       ease: "power2.out",
     });
   });
+
+  if (window.innerWidth <= 768) {
+    // You can adjust the breakpoint (768px) based on your design
+    tl.from(card, {
+      scale: 1, // Reset scaling for mobile devices
+      opacity: 1,
+      duration: 1, // Adjust the duration for mobile
+      ease: "power2.out",
+    });
+  }
   // Lenis Smooth Scroll Code
   const lenis = new Lenis({
     smooth: true, // Enables smooth scrolling
@@ -58,7 +74,10 @@ function loadPage() {
   // Optional: Turn off GSAP lag smoothing for smoother animation
   gsap.ticker.lagSmoothing(0);
 }
-loadPage();
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadPage();
+});
 
 //ABOUT US PAGE
 
