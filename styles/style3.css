@@ -219,7 +219,7 @@ header ul a:hover {
   mask-image: linear-gradient(
     to right,
     transparent,
-    rgba(0, 0, 0, 0.4) 10% 90%,
+    rgba(0, 0, 0, 0.8) 10% 90%,
     transparent
   );
 }
@@ -242,6 +242,7 @@ header ul a:hover {
 }
 .slider .list .item img {
   width: 100%;
+  mix-blend-mode: color-burn;
 }
 
 
@@ -492,11 +493,51 @@ aspect-ratio: 3/2;
 /* PORTFOLIO SHOWCASE SECTION */
 
 .showcase-pic{
-  height: 100vh;
+  height: 70vh;
   background-image: url("../assets/port1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.showcase{
+  margin-top: 8rem;
+}
+
+.showcase-video{
+ 
+  max-height: 50vh;
+    video{
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5));
+    }
+}
+
+.mg-glass{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  i{
+    visibility: hidden;
+  }
+}
+
+.ads:hover .mg-glass{
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  height: 100%;
+  cursor: pointer;
+  i{
+    font-size: 20px;
+    color: white;
+    visibility: visible;
+  }
 }
 @media (max-width: 1350px) {
   #hero {
