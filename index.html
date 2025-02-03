@@ -3,7 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avid Agecny</title>
+    <title>Avid Agency</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
 
     <!-- BOOTSTRAP CSS CDN -->
     <link
@@ -12,6 +27,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
 
+    <!-- LENTIS SMOOTH SCROOL CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
     <!-- SWIPPER CDN -->
     <link
       rel="stylesheet"
@@ -25,183 +44,419 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <!-- MANUAL CSS -->
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style3.css" />
   </head>
-  <body>
-    <!--  HEAD -->
-    <header>
-      <nav class="container">
-        <a href="#" class="logo fs-4">avid<span>agency</span></a>
-        <ul class="menu">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#home">ABOUT</a></li>
-          <li><a href="#services">SERVICES</a></li>
-          <li><a href="#home">PORTFOLIO</a></li>
-        </ul>
+  <body class="loading">
+    <!-- LOADING ANIMATION -->
+    <div class="preloader">
+      <h1 class="preloader-text">
+        LOADING... <span id="loader-percent">0%</span>
+      </h1>
+    </div>
+
+    <div class="text-white successMessage"></div>
+      <h5>message sent successfully ✅</h5>
+    </div>
+
+    <header class="bg-dark text-white d-none d-lg-block">
+      <div class="container-md">
+        <nav
+          class="d-flex align-items-center justify-content-between p-4 fixed-top bg-dark">
+          <ul class="m-0 p-0">
+            <li>
+              <a href="#services">Services</a>
+            </li>
+          
+             <li class="nav-item">
+              <a class="" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#pricing">Pricing plan</a>
+            </li>
+          </ul>
+          <a
+            class="navbar-brand fw-bold fs-4 position-absolute top-50 start-50 translate-middle"
+            href="index3.html"
+            >AVID <span class="text-primary">AGENCY</span></a
+          >
+          <ul class="m-0 last-menu">
+            <li class="nav-item">
+              <a class="" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="showcase.html">Show Case</a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                href="https://calendly.com/avid-agency0"
+                target="_blank"
+                class="btn btn-primary book text-uppercase me-1"
+                >book a meeting
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-5 d-lg-none">
+            <a
+              href="https://calendly.com/avid-agency0"
+              target="_blank"
+              class="btn btn-primary book"
+              >book a meeting
+              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+            <i class="fs-4 fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <header class="d-lg-none">
+      <nav
+        class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top text-uppercase">
+        <div class="container nav-header">
+          <a class="navbar-brand fw-bold fs-4" href="#"
+            >AVID <span class="text-primary">AGENCY</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end text-bg-dark"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                menu
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="" href="showcase.html">Show Case</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="" aria-current="page" href="#testimonials"
+                    >Testimonials</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="" href="#pricing">Pricing plan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="" href="#faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="https://calendly.com/avid-agency0"
+                    target="_blank"
+                    class="btn btn-primary book"
+                    >book a meeting
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
-    <!-- MAIN CONTENT -->
     <main>
-      <section id="main" class="py-3">
-        <div class="container-lg">
-          <div class="row">
-            <div
-              class="col-lg-12 main d-flex flex-column align-items-md-center align-items-lg-start gap-1">
-              <div class="main-icon opacity-75">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <small>5.0</small>
+      <section id="hero" class="bg-dark text-white">
+        <div
+          class="container d-flex flex-column justify-content-evenly lh-base mt-5"
+          style="height: 100%">
+          <h1 class="mb-0 mt-3 mt-lg-0 mb-lg-2 hero-text">
+            Accelerate Your Business
+            <strong class="text-primary">Growth</strong> Social Media Strategies
+            for Lasting Success
+          </h1>
+          <div class="row align-items-center justify-content-between">
+            <div class="col-lg-6 mt-3 mt-md-0">
+              <p class="animate-text">
+                Avid Agency has a core focus in working with various business
+                just like yours. Using proven methods, we deliver impecable
+                services, results, and business growth for our clients, Ready to
+                learn more?
+              </p>
+              <a
+                href="#contact"
+                class="btn btn-primary mb-2 mb-lg-0 js-toggle-free"
+                >GET A FREE GUIDE
+              </a>
+              <div class="free-guide display mt-2">
+                <form
+                  action="https://formspree.io/f/xyzyvvrl"
+                  method="POST"
+                  class="d-flex align-items-center">
+                  <input
+                    placeholder="The free pdf would be sent to your email"
+                    type="email"
+                    name="email for free guide"
+                    class="form-control js-form-message mb-2"
+                    id="InputEmail1"
+                    aria-describedby="emailHelp" />
+                  <button class="btn btn-primary js-submit-btn">Send</button>
+                </form>
               </div>
-              <h2 class="h1">
-                Empower Your Business with Data-Driven Social Media Marketing
-              </h2>
-              <div class="gap-3 d-none d-md-flex">
-                <p
-                  class="text-capitalize main-text position-relative ps-2 opacity-25">
-                  Scale your Business
-                </p>
-                <p
-                  class="text-capitalize main-text position-relative ps-2 opacity-25">
-                  engage more customers
-                </p>
-                <p
-                  class="text-capitalize main-text position-relative ps-2 opacity-25">
-                  boost your revenue
-                </p>
+              <div class="d-flex d-md-none d-lg-flex flex-column mt-lg-5">
+                <div class="d-flex gap-1 check-item">
+                  <span class="text-primary">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <p
+                    class="text-capitalize position-relative ps-2 mb-0 mb-md-1">
+                    Scale your Business
+                  </p>
+                </div>
+                <div class="d-flex gap-1 check-item">
+                  <span class="text-primary">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <p
+                    class="text-capitalize position-relative ps-2 mb-0 mb-md-1">
+                    engage more customers
+                  </p>
+                </div>
+                <div class="d-flex gap-1 check-item">
+                  <span class="text-primary">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <p
+                    class="text-capitalize position-relative ps-2 mb-0 mb-md-1">
+                    boost your revenue
+                  </p>
+                </div>
+                <div class="d-flex gap-1 check-item">
+                  <span class="text-primary">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <p
+                    class="text-capitalize position-relative ps-2 mb-0 mb-md-1">
+                    ROI+
+                  </p>
+                </div>
               </div>
+            </div>
 
-              <div class="cta">
-                <a href="#contact" class="btn btn-outline-primary mb-2 mb-md-0"
-                  >GET IN TOUCH
-                </a>
-                <a
-                  href="https://wa.me/1234567890"
-                  target="_blank"
-                  class="btn btn-outline-light"
-                  >Book Your Free Consultation
-                  <i class="fa-brands fa-whatsapp"></i
-                ></a>
-              </div>
+            <div class="col-lg-6">
+              <video
+                class="hero-video"
+                src="assets/Avid compressed Hero Video.mp4"
+                loop
+                loading="lazy"
+                autoplay
+                muted></video>
             </div>
           </div>
         </div>
       </section>
-      <!-- OUR SOLUTION -->
-      <section id="services">
-        <div class="container my-5">
-          <h1 class="text-center py-5">
-            Our solutions help brands gain profit
-          </h1>
+
+      <div class="container mt-5">
+        <div class="row align-items-center">
+          <div class="col-md-4 el-in-vh mb-sm-2">
+            <h5 class="text-muted">Trusted by fast moving brands worldwide</h5>
+            <div class="d-flex gap-3">
+              <div class="d-flex flex-column justify-content-center">
+                <h3 class="m-0 h3 text-primary">
+                  <span data-target-number="50" class="number-count text-dark"
+                    >0</span
+                  >+
+                </h3>
+                <span class="fs-6 fw-medium">Clients World Wide</span>
+              </div>
+
+              <div class="d-flex flex-column justify-content-center">
+                <h3 class="m-0 h3 text-primary">
+                  <span data-target-number="97" class="number-count text-dark"
+                    >0</span
+                  >+
+                </h3>
+                <span class="fs-6 fw-medium">Completed Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-8 slider mt-4"
+            style="--width: 200px; --height: 100px; --quantity: 5">
+            <div class="list">
+              <div class="item" style="--position: 1">
+                <img src="./assets/logo/AUGUST LOGO.png" alt="brands we have worked with">
+              </div>
+              <div class="item" style="--position: 2">
+                <img src="./assets/logo/AYA OLA LOGO.png" alt="brands we have worked with">
+              </div>
+              <div class="item" style="--position: 3">
+                <img src="./assets/logo/INFLUENCER HQ LOGO.png" alt="brands we have worked with">
+              </div>
+              <div class="item" style="--position: 4">
+                <img src="./assets/logo/SLIMLYFE LOGO.png" alt="brands we have worked with">
+              </div>
+              <div class="item" style="--position: 5">
+               <img src="./assets/portfolio3.jpg" alt="">
+              </div>
+             <!--  <div class="item" style="--position: 6"><h2>GG Luxury</h2></div>
+              <div class="item" style="--position: 7"><h2>Slim Lyfe</h2></div>
+              <div class="item" style="--position: 8">
+                <h2>Chioma Belle</h2>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="services" class="my-2 my-md-5">
+        <div class="container py-5">
+          <div class="text-center mb-5">
+            <h1 class="fw-bold">
+              Everything You Need to Grow Your Online Presence.
+            </h1>
+            <p class="fs-5 text-muted">
+              Get all the tools and strategies you need to take your brand to
+              the next level—without worrying about the small stuff. Let us
+              handle the algorithms, content, and engagement so you can focus on
+              what matters.
+            </p>
+          </div>
           <div class="row gy-3">
             <div class="col-md-6 col-lg-4">
-              <div
-                class="card d-flex flex-column g-2 align-items-start methods">
+              <div class="card rounded-4">
                 <img
-                  src="assets/av socila m mgt.svg"
-                  class="p-4 pb-0"
-                  alt="..." />
-                <div class="card-body">
-                  <h4 class="card-title">Social Media Management</h4>
-                  <p class="card-text lead">
-                    Engaging with the audience to build relationships and foster
-                    community.
+                  src="assets/social media mgt.jpg"
+                  class="card-img-top rounded"
+                  alt="social media management" />
+                <div class="card-body my-2 px-2">
+                  <p class="lead p-2">
+                    Taking charge of the social media pages of our clients and
+                    ensuring their content reach the right audience therefore
+                    increasing their social media presence.
                   </p>
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div
-                class="card d-flex flex-column g-2 align-items-start methods">
-                <img src="assets/av paid.svg" class="p-4 pb-0" alt="..." />
-                <div class="card-body">
-                  <h4 class="card-title">Paid advertising campaigns</h4>
-                  <p class="card-text lead">
-                    Advertising campaigns on social by media platform various ad
-                    formats.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div
-                class="card d-flex flex-column g-2 align-items-start methods">
-                <img src="assets/av content.svg" class="p-4 pb-0" alt="..." />
-                <div class="card-body">
-                  <h4 class="card-title">Content creation</h4>
-                  <p class="card-text lead">
-                    We create engaging and relevant content for social media
-                    platforms.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div
-                class="card d-flex flex-column g-2 align-items-start methods">
+              <div class="card rounded-4">
                 <img
-                  src="assets/av social audit.svg"
-                  class="p-4 pb-0"
-                  alt="..." />
-                <div class="card-body">
-                  <h4 class="card-title">Social media audits</h4>
-                  <p class="card-text lead">
-                    Conduct audits of clients' existing social media profiles &
-                    strategies.
+                  src="assets/ads management.jpg"
+                  class="card-img-top rounded"
+                  alt="adds management" />
+                <div class="card-body px-2 my-2">
+                  <p class="p-2 lead">
+                    Helping our clients advertise their products and services on
+                    the appropriate channels that would be paid for.
                   </p>
                 </div>
               </div>
             </div>
+
             <div class="col-md-6 col-lg-4">
-              <div
-                class="card d-flex flex-column g-2 align-items-start methods">
+              <div class="card rounded-4">
                 <img
-                  src="assets/av influencer.svg"
-                  class="p-4 pb-0"
-                  alt="..." />
-                <div class="card-body">
-                  <h4 class="card-title">Influencer marketing</h4>
-                  <p class="card-text lead">
-                    Collaborate with influencers and brand ambassadors amplify
-                    reach.
+                  src="assets/video editing.jpg"
+                  class="card-img-top rounded"
+                  alt=".video editing" />
+                <div class="card-body px-2 my-2">
+                  <p class="lead p-2">
+                    In the world of video, only the exceptional stand out. Are
+                    you ready to elevate your brand with unique video editing?
+                    From corporate giants to trendsetting influencers, our
+                    editing suite delivers jaw-dropping results, In the aspect
+                    of:
                   </p>
+                  <ul class="lead">
+                    <li>Social media video edits</li>
+                    <li>Instagram reel</li>
+                    <li>Tiktok reel</li>
+                    <li>
+                      Youtube shorts Product videos Typography animation Youtube
+                      videos
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div
-                class="card d-flex flex-column g-2 align-items-start methods">
-                <img src="assets/av training.svg" class="p-4 pb-0" alt="..." />
-                <div class="card-body">
-                  <h4 class="card-title">Training Sessions and Consultation</h4>
-                  <p class="card-text lead">
-                    Training sessions and consultations to educate clients on
-                    social media.
+              <div class="card rounded-4">
+                <img
+                  src="assets/graphic design.jpg"
+                  class="card-img-top rounded"
+                  alt="graphics design" />
+                <div class="card-body px-2 my-2">
+                  <p class="lead p-2">
+                    Create impressive graphic content and logo’s for all our
+                    clients and clients who demand it.
                   </p>
                 </div>
               </div>
             </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card rounded-4">
+                <img
+                  src="assets/email marketing.jpg"
+                  class="card-img-top rounded"
+                  alt="email marketing" />
+                <div class="card-body px-2 my-2">
+                  <p class="lead p-2">
+                    Help to advertise our clients and their services via E-mail
+                    CAC Registration Services
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center my-3 mx-auto text-uppercase">
+            <a
+              href="https://calendly.com/avid-agency0"
+              target="_blank"
+              class="btn btn-primary btn-lg"
+              >schedule a meeting
+              <i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
           </div>
         </div>
       </section>
 
       <!-- PORTFOLIO -->
-      <section>
-        <div class="container my-5">
-          <div class="py-5 text-center">
-            <h2 class="text-center">PORTFOLIO</h2>
-            <p class="lead text-center text-muted text-capitalise">
+      <!-- <section id="portfolio">
+        <div class="container my-2 my-md-5">
+          <div class="text-center py-3">
+            <marquee
+              behavior=""
+              direction="left"
+              class="display-4 text-muted text-capitalize">
               We’ve helped over 200+ startups grow their business around the
-              world
-            </p>
+              world</marquee
+            >
           </div>
 
           <div
-            class="d-flex align-items-center justify-content-between flex-wrap">
+            class="d-flex align-items-center justify-content-between flex-wrap gap-3 py-3">
             <h4 class="text-uppercase">Latest projects</h4>
-            <div class="filter-btns">
+            <div class="filter-btns d-flex align-items-center flex-wrap">
+              <span class="text-muted fs-5 fw-bold">filter by:</span>
               <button class="btn text-uppercase text-primary" data-filter="all">
                 all
               </button>
@@ -225,82 +480,563 @@
 
           <div class="row my-3 portfolio-gallery">
             <div class="col-md-6 col-lg-4">
-              <div class="card mix engagement">
+              <div class="card mix engagement rounded-4">
                 <img
-                  src="assets/AV.png"
-                  class="card-img-top rounded"
+                  src="assets/portfolio1.jpg"
+                  class="card-img-top card-img"
                   alt="..." />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                  <p class="d-inline-flex gap-1">
+                    <button
+                      class="btn btn-primary mt-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseExample"
+                      aria-expanded="false"
+                      aria-controls="collapseExample">
+                      Read More
+                    </button>
                   </p>
-                </div>
-
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="card-link"
+                        ><i class="fa-brands fa-facebook"></i
+                      ></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div class="card mix content">
+              <div class="card mix content rounded-4">
                 <img
-                  src="assets/AV.png"
-                  class="card-img-top rounded"
+                  src="assets/portfolio2.jpg"
+                  class="card-img-top rounded card-img"
                   alt="..." />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                  <p class="d-inline-flex gap-1">
+                    <button
+                      class="btn btn-primary mt-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collaspeOne"
+                      aria-expanded="false"
+                      aria-controls="collaspeOne">
+                      Read More
+                    </button>
                   </p>
-                </div>
-
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
+                  <div class="collapse" id="collaspeOne">
+                    <div class="card card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="card-link"
+                        ><i class="fa-brands fa-facebook"></i
+                      ></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div class="card mix pagmgt">
+              <div class="card mix pagmgt rounded-4">
                 <img
-                  src="assets/AV.png"
-                  class="card-img-top rounded"
+                  src="assets/portfolio3.jpg"
+                  class="card-img-top rounded card-img"
                   alt="..." />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                  <p class="d-inline-flex gap-1">
+                    <button
+                      class="btn btn-primary mt-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collaspeTwo"
+                      aria-expanded="false"
+                      aria-controls="collaspeTwo">
+                      Read More
+                    </button>
                   </p>
-                </div>
-
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
+                  <div class="collapse" id="collaspeTwo">
+                    <div class="card card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="card-link"
+                        ><i class="fa-brands fa-facebook"></i
+                      ></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-4">
-              <div class="card mix engagement">
+              <div class="card mix engagement rounded-4">
                 <img
-                  src="assets/AV.png"
-                  class="card-img-top rounded"
+                  src="assets/portfolio4.jpg"
+                  class="card-img-top rounded card-img"
                   alt="..." />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                  <p class="d-inline-flex gap-1">
+                    <button
+                      class="btn btn-primary mt-5"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collaspeThree"
+                      aria-expanded="false"
+                      aria-controls="collaspeThree">
+                      Read More
+                    </button>
                   </p>
+                  <div class="collapse" id="collaspeThree">
+                    <div class="card card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="card-link"
+                        ><i class="fa-brands fa-facebook"></i
+                      ></a>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
 
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" class="my-5 py-5 my-md-5 pb-5">
+        <div class="container">
+          <h1 class="text-center text-uppercase py-3">
+            Loved by Businesses / Clients Worldwide.
+          </h1>
+          <h5 class="text-muted text-center">
+            Hear from the businesses that have seen success with our social
+            media marketing services.
+          </h5>
+          <div class="testimonial">
+            <div class="background-section d-none d-xl-block">
+              <img src="./assets/person2.png" alt="" class="person2" />
+            </div>
+
+            <div class="swiper swiperT" style="background-color: #ccc">
+              <div class="swiper-wrapper js-comments">
+                <!-- Add more slides here if needed -->
+                <!-- Example of additional slides -->
+                <div class="swiper-slide swiper-slideT">
+                  <div class="client">
+                    <div class="client-info">
+                      <h4>Client Name</h4>
+                      <div class="" style="color: gold">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <q class="text">Client comment</q>
+                </div>
+                <!-- Repeat for more slides -->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="testimonial-titles d-none d-xl  -block">
+              <h3 class="sub-heading">Testimonials</h3>
+              <h2 class="heading">Hear from our happy clients</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="bg-dark text-light px-2 my-5 p-5">
+        <div class="text-center">
+          <h1>Simple Pricing, for Everyone.</h1>
+          <p class="lead opacity-75">
+            No matter the size of your business, our services are designed to
+            fit your needs and help you grow your online presence with ease.
+          </p>
+        </div>
+        <div class="container-lg mt-xl-5 pt-xl-5">
+          <div class="row mb-3 align-items-center justify-content-center g-0">
+            <div class="col-md-8 col-lg-4 col-xl-3.5">
+              <div class="card border-0">
+                <div class="card-body py-4 bg-dark text-light">
+                  <h4 class="card-title">Standard Package</h4>
+                  <p class="fs-6 card-subtitle">
+                    Essential Management for a Strong Online Presence
+                  </p>
+
+                  <p class="my-4 text-primary">
+                    <span class="display-5 fw-bold">$1000.00</span>/Mo
+                  </p>
+
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Full Page Management</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Regular Posting</small>
+                  </div>
+
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Social Media Strategy</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Hashtag/Keyword Research</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Caption Writing</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Community Engagement</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Monthly Analytics Report</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-9 col-lg-4">
+              <div class="card border-primary border-2 text-center">
+                <div class="card-header text-primary text-center">
+                  Most Popular
+                </div>
+                <div class="card-body py-2 px-4 px-md-3 px-xl-5">
+                  <h4 class="card-title">Gold Package</h4>
+                  <p class="fs-6 card-subtitle">
+                    Our Most Popular Choice for Comprehensive Growth
+                  </p>
+                  <p class="my-4 text-primary">
+                    <span class="display-4 fw-bold">$1500.00</span>/Mo
+                  </p>
+
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Full Page Management</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Regular Posting</small>
+                  </div>
+
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Social Media Strategy</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Hashtag/Keyword Research</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Caption Writing</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Community Engagement</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Monthly Analytics Report</small>
+                  </div>
+
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Enhanced Content Creation</small>
+                  </div>
+
+                  <!--   <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small
+                      class="fs-6 ps-2"
+                      title="Advanced Social Media Services"
+                      >ASMS</small
+                    >
+                  </div> -->
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Targeted Advertising</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Bi-Weekly Analytics Report</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8 col-lg-4 col-xl-3.5">
+              <div class="card border-0">
+                <div class="card-body p-4 bg-dark text-white">
+                  <h4 class="card-title">Premium Package</h4>
+                  <p class="fs-6 card-subtitle">
+                    Ultimate Package for Maximum Impact and Management
+                  </p>
+
+                  <p class="my-4 text-primary">
+                    <span class="display-5 fw-bold">$2000.00</span>/Mo
+                  </p>
+
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-plus"></i>
+                    </span>
+                    <small class="fs-6 ps-2"
+                      >All features in Gold Package</small
+                    >
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Premium Content Creation</small>
+                  </div>
+
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="ps-2"
+                      >Comprehensive Social Media Strategy</small
+                    >
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="ps-2">24/7 Community Management</small>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-primary">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <small class="fs-6 ps-2">Weekly Analytics Report</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <p class="text-capitalize">
+              Join industry leaders who trust us to shape their vision. Your
+              success story starts here.
+            </p>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+              Get Started
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="staticBackdrop"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true">
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content glass text-dark">
+                  <div class="modal-header">
+                    <h4
+                      class="modal-title text-center"
+                      id="staticBackdropLabel">
+                      Get Started with Your Social Media Management Plan
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <p class="lead">
+                      Fill out the form below to provide us with your details
+                      and preferences. Our team will review your information and
+                      get in touch to discuss the best social media management
+                      package for your business.
+                    </p>
+
+                    <form
+                      class="mt-2"
+                      action="https://formspree.io/f/xyzyvvrl"
+                      method="POST">
+                      <div class="mb-3" bis_skin_checked="1">
+                        <label for="name" class="form-label"> Full Name:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          name="name"
+                          required
+                          aria-describedby="name"
+                          fdprocessedid="0e7xnk" />
+                      </div>
+                      <div class="mb-3" bis_skin_checked="1">
+                        <label for="inputEmail1" class="form-label"
+                          >Email address:</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail1"
+                          name="email"
+                          required
+                          aria-describedby="emailHelp"
+                          fdprocessedid="0e7xnk" />
+                        <div
+                          id="emailHelp"
+                          class="form-text fw-bold"
+                          bis_skin_checked="1">
+                          We'll never share your email with anyone else.
+                        </div>
+                      </div>
+                      <div class="mb-3" bis_skin_checked="1">
+                        <label for="number" class="form-label"
+                          >Phone Number:</label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="number"
+                          name="phone_number"
+                          aria-describedby="number" />
+                        <div
+                          id="telephone"
+                          class="form-text fw-bold"
+                          bis_skin_checked="1">
+                          We'll never share your number with anyone else.
+                        </div>
+                      </div>
+                      <select
+                        class="form-select text-capitalize ps-1 mb-2"
+                        required
+                        name="business_type"
+                        aria-label="Default select example">
+                        <option selected>Type of Business</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Service">Service</option>
+                        <option value="E-commerce">E-commerce</option>
+                        <option value="Hospitality">Hospitality</option>
+                        <option value="Tech">Tech</option>
+                        <option value="Others">Others</option>
+                      </select>
+
+                      <label for="plan">Preferred Plan</label>
+                      <div id="plan" class="form-check mb-2">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="standard"
+                          name="plan"
+                          value="Standard"
+                          required />
+                        <label for="standard">Standard</label><br />
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="gold"
+                          name="plan"
+                          value="Gold" />
+                        <label for="gold">Gold</label><br />
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="premium"
+                          name="plan"
+                          value="Premium" />
+                        <label for="premium">Premium</label>
+                      </div>
+
+                      <div class="mb-3" bis_skin_checked="1">
+                        <label for="message" class="form-label"
+                          >Aditional Message:</label
+                        >
+                        <textarea
+                          class="form-control"
+                          placeholder="Provide any additional details or requirements"
+                          id="message"
+                          name="additional_message"
+                          aria-describedby="message"
+                          fdprocessedid="0e7xnk">
+                        </textarea>
+                      </div>
+
+                      <button
+                        type="submit"
+                        class="btn btn-primary js-submit-btn"
+                        fdprocessedid="pk2e5b">
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                  <!--  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">
+                      Understood
+                    </button>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -308,9 +1044,10 @@
         </div>
       </section>
 
-      <section>
-        <div class="container my-5 py-5">
-          <h1 class="text-center text-capitalize py-5">
+      <!-- FAQ -->
+      <section id="#faq">
+        <div class="container my-5">
+          <h1 class="p-5 p-md-3 text-center text-capitalize">
             frequnetly asked questions
           </h1>
 
@@ -492,478 +1229,164 @@
         </div>
       </section>
 
-      <!-- PRICING -->
-      <section class="bg-light mt-5">
-        <div class="container-lg">
-          <div class="text-center">
-            <h2>Pricing Plans</h2>
-            <p class="lead text-muted">Choose pricing plan that suits you.</p>
-          </div>
-          <div
-            class="row mt-5 mb-3 align-items-center justify-content-center g-0">
-            <div class="col-11 col-md-8 col-lg-4 col-xl-3">
-              <div class="card border-0">
-                <div class="card-body py-4">
-                  <h4 class="card-title">Standard Package</h4>
-                  <p class="fs-6 card-subtitle">
-                    Essential Management for a Strong Online Presence
-                  </p>
+      <!-- CONTACT -->
+      <section class="my-3">
+        <div class="container p-4">
+          <h2 class="fw-medium mb-3 pb-5 display-5 opacity-50">Contact Us</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="d-flex flex-column gap-4">
+                <div class="d-flex align-items-center gap-2">
+                  <div><i class="fa-solid fa-map"></i></div>
+                  <p class="m-0 fs-5">We work remotely</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <div><i class="fa-solid fa-clock"></i></div>
+                  <p class="m-0 fs-5">Monday to sunday open all hours</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <div>
+                    <a href="mailto:"></a>
+                    <a href="mailto:victorabijah@avidgency.com" class="social-icon"
+                      ><i class="fa-solid fa-envelope"></i
+                    ></a>
+                  </div>
+                  <p class="m-0 fs-5">victorabijah@avidgency.com</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <div>
+                    <a href="tel:+2347085863059" class="social-icon"
+                      ><i class="fa-solid fa-phone"></i
+                    ></a>
+                  </div>
+                  <p class="m-0 fs-5">+234 708 586 3059</p>
+                </div>
 
-                  <p class="my-4 text-primary">
-                    <span class="display-5 fw-bold">$12.00</span>/Mo
-                  </p>
-
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Full Page Management</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2">Regular Posting</small>
-                  </div>
-
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Social Media Strategy</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Hashtag/Keyword Research</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2">Caption Writing</small>
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Community Engagement</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Monthly Analytics Report</small
-                    >
-                  </div>
+                <div class="fs-5 d-flex gap-2">
+                  <a
+                    target="_blank"
+                    href="https://web.facebook.com/profile.php?id=61562865045587"
+                    class="social-icon"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                  <a
+                    target="_blank"
+                    href="https://x.com/avidagency_"
+                    class="social-icon"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/avidagency_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    class="social-icon"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a
+                    target="_blank"
+                    href="https://www.tiktok.com/@avidagency?is_from_webapp=1&sender_device=pc"
+                    class="social-icon"
+                    ><i class="fa-brands fa-tiktok"></i
+                  ></a>
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-9 col-lg-4">
-              <div class="card border-primary border-2">
-                <div class="card-header text-primary">Most Popular</div>
-                <div class="card-body py-2 px-4 px-md-5">
-                  <h4 class="card-title">Gold Package</h4>
-                  <p class="fs-6 card-subtitle">
-                    Our Most Popular Choice for Comprehensive Growth
-                  </p>
-                  <p class="my-4 text-primary">
-                    <span class="display-4 fw-bold">$12.00</span>/Mo
-                  </p>
-
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Full Page Management</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2">Regular Posting</small>
-                  </div>
-
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Social Media Strategy</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Hashtag/Keyword Research</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2">Caption Writing</small>
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Community Engagement</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Monthly Analytics Report</small
-                    >
-                  </div>
-
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Enhanced Content Creation</small
-                    >
-                  </div>
-
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Advanced Social Media Strategy</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Targeted Advertising</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Bi-Weekly Analytics Report</small
-                    >
+            <div class="col-lg-6 mt-3 mt-md-0">
+              <h2>Tell Us Your Project Idea</h2>
+              <form
+                class="mt-2"
+                action="https://formspree.io/f/xyzyvvrl"
+                method="POST">
+                <div class="mb-3" bis_skin_checked="1">
+                  <label for="name" class="form-label"> Full Name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                    aria-describedby="name"
+                    fdprocessedid="0e7xnk" />
+                </div>
+                <div class="mb-3" bis_skin_checked="1">
+                  <label for="inputEmail1" class="form-label"
+                    >Email address:</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail1"
+                    name="email"
+                    required
+                    aria-describedby="emailHelp"
+                    fdprocessedid="0e7xnk" />
+                  <div id="emailHelp" class="form-text" bis_skin_checked="1">
+                    We'll never share your email with anyone else.
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="col-11 col-md-8 col-lg-4 col-xl-3">
-              <div class="card border-0">
-                <div class="card-body p-4">
-                  <h4 class="card-title">Premium Package</h4>
-                  <p class="fs-6 card-subtitle">
-                    Ultimate Package for Maximum Impact and Management
-                  </p>
-
-                  <p class="my-4 text-primary">
-                    <span class="display-5 fw-bold">$12.00</span>/Mo
-                  </p>
-
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-plus"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >All features in Gold Package</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Premium Content Creation</small
-                    >
-                  </div>
-
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted ps-2"
-                      >Comprehensive Social Media Strategy</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted ps-2"
-                      >24/7 Community Management</small
-                    >
-                  </div>
-                  <div class="d-flex align-items-center mb-1">
-                    <span class="text-primary">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                    <small class="text-muted fs-6 ps-2"
-                      >Weekly Analytics Report</small
-                    >
+                <div class="mb-3" bis_skin_checked="1">
+                  <label for="number" class="form-label">Phone Number:</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="number"
+                    name="phone"
+                    aria-describedby="number" />
+                  <div id="emailHelp" class="form-text" bis_skin_checked="1">
+                    We'll never share your number with anyone else.
                   </div>
                 </div>
-              </div>
+
+                <div class="mb-3" bis_skin_checked="1">
+                  <label for="message" class="form-label"
+                    >Aditional Message:</label
+                  >
+                  <textarea
+                    class="form-control"
+                    placeholder="Provide any additional details or requirements"
+                    id="message"
+                    name="message"
+                    aria-describedby="message">
+                  </textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary js-submit-btn"
+                  fdprocessedid="pk2e5b">
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
-
-          <div class="text-center">
-            <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop">
-              Get Started
-            </button>
-
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="staticBackdrop"
-              data-bs-backdrop="static"
-              data-bs-keyboard="false"
-              tabindex="-1"
-              aria-labelledby="staticBackdropLabel"
-              aria-hidden="true">
-              <div
-                class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content glass">
-                  <div class="modal-header">
-                    <h6
-                      class="modal-title text-center"
-                      id="staticBackdropLabel">
-                      Get Started with Your Social Media Management Plan
-                    </h6>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body text-start">
-                    <p class="text-muted">
-                      Fill out the form below to provide us with your details
-                      and preferences. Our team will review your information and
-                      get in touch to discuss the best social media management
-                      package for your business.
-                    </p>
-
-                    <form class="mt-2">
-                      <div class="mb-3" bis_skin_checked="1">
-                        <label for="name" class="form-label"> Full Name:</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          required
-                          aria-describedby="name"
-                          fdprocessedid="0e7xnk" />
-                      </div>
-                      <div class="mb-3" bis_skin_checked="1">
-                        <label for="inputEmail1" class="form-label"
-                          >Email address:</label
-                        >
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="inputEmail1"
-                          required
-                          aria-describedby="emailHelp"
-                          fdprocessedid="0e7xnk" />
-                        <div
-                          id="emailHelp"
-                          class="form-text"
-                          bis_skin_checked="1">
-                          We'll never share your email with anyone else.
-                        </div>
-                      </div>
-                      <div class="mb-3" bis_skin_checked="1">
-                        <label for="number" class="form-label"
-                          >Phone Number:</label
-                        >
-                        <input
-                          type="tel"
-                          class="form-control"
-                          id="number"
-                          aria-describedby="number" />
-                        <div
-                          id="emailHelp"
-                          class="form-text"
-                          bis_skin_checked="1">
-                          We'll never share your numver with anyone else.
-                        </div>
-                      </div>
-                      <select
-                        class="form-select text-capitalize ps-1 mb-2"
-                        required
-                        aria-label="Default select example">
-                        <option selected>Type of Business</option>
-                        <option value="Retail">Retail</option>
-                        <option value="Service">Service</option>
-                        <option value="E-commerce">E-commerce</option>
-                        <option value="Hospitality">Hospitality</option>
-                        <option value="Tech">Tech</option>
-                        <option value="Others">Others</option>
-                      </select>
-
-                      <label for="plan">Preferred Plan</label>
-                      <div id="plan" class="form-check mb-2">
-                        <input
-                          type="radio"
-                          class="form-check-input"
-                          id="standard"
-                          name="plan"
-                          value="Standard"
-                          required />
-                        <label for="standard">Standard</label><br />
-                        <input
-                          type="radio"
-                          class="form-check-input"
-                          id="gold"
-                          name="plan"
-                          value="Gold" />
-                        <label for="gold">Gold</label><br />
-                        <input
-                          type="radio"
-                          class="form-check-input"
-                          id="premium"
-                          name="plan"
-                          value="Premium" />
-                        <label for="premium">Premium</label>
-                      </div>
-
-                      <div class="mb-3" bis_skin_checked="1">
-                        <label for="message" class="form-label"
-                          >Aditional Message:</label
-                        >
-                        <textarea
-                          class="form-control"
-                          placeholder="Provide any additional details or requirements"
-                          id="message"
-                          aria-describedby="message"
-                          fdprocessedid="0e7xnk">
-                        </textarea>
-                      </div>
-
-                      <button
-                        type="submit"
-                        class="btn btn-primary"
-                        fdprocessedid="pk2e5b">
-                        Submit
-                      </button>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal">
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Understood
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TESTIMONIALS -->
-      <section id="testimonials" class="my-5">
-        <div class="container-lg">
-          <h3 class="text-center text-uppercase py-3">
-            What Our Clients Are Saying
-            <span>
-              <div class="text-center">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </span>
-          </h3>
-          <h5 class="text-muted text-center">
-            Hear from the businesses that have seen success with our social
-            media marketing services.
-          </h5>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER SECTION -->
-    <footer class="bg-dark text-white mt-3">
-      <div class="container-fluid">
-        <div class="d-flex align-items-center justify-content-between py-3">
-          <h3>LOGO</h3>
-          <div class="h5">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-tiktok"></i>
-          </div>
-        </div>
-        <!--  <div class="row d-flex align-items-center justify-content-between">
-          <div class="col-md-6">
-            <p class="">
-              We are a branding agency that digitally works to help companies
-              grow. We have a successful track record of working with various
-              organizations.
-            </p>
-          </div>
-          <div class="col-md-6 text-start text-md-end">
-            <h5>
-              Give us a call: <br />
-              <a href="" class="cndm">+234 543 4343</a>
-            </h5>
-            <h5>
-              Send us an email: <br />
-              <a href="" class="cndm">avid@agency.com</a>
-            </h5>
-          </div>
-        </div> -->
-        <div class="text-center border-top border-white border-opacity-25 pt-2">
-          <p class="m-0">
-            © Copyright 2024, All Rights Reserved by Avid Agency
+    <footer>
+      <div class="container">
+        <div class="row text-center border-top border-black border-opacity-25">
+          <p class="lead">
+            Avid <span class="text-primary">Agency</span> © 2024. All rights
+            reserved
           </p>
         </div>
       </div>
     </footer>
+
     <!-- BOOTSTRAP JS CDN -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
+    <!-- GSAP JS CDN -->
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- LENTIS SMOOTH SCROOL -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <!-- SWIPPER JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/scripts/mixitup.min.js"></script>
-    <script src="/scripts/app.js"></script>
+    <script src="./scripts/mixitup.min.js"></script>
+    <script src="./scripts/app3.js" type="module"></script>
   </body>
 </html>

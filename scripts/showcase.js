@@ -1,4 +1,4 @@
-const videos = [
+/* const videos = [
   { src: "./assets/showcaseVideos/If your ideal client.... main.mp4" },
   { src: "./assets/showcaseVideos/VID-20241225-WA0007.mp4" },
   { src: "./assets/showcaseVideos/CONTENT 2.mp4" },
@@ -25,7 +25,7 @@ if (videoContainer) {
   videoContainer.innerHTML = htmlVideoContent;
 } else {
   console.error("Element with id js-videos not found.");
-}
+} */
 
 const logos = [
   {
@@ -81,3 +81,33 @@ ads.forEach((ad) => {
  `;
 });
 document.querySelector("#js-ads").innerHTML = htmlAdsContent;
+
+const socialMediaMgt = [
+  {
+    src: "./assets//socialmediamgt/WhatsApp Image 2025-01-31 at 05.31.08_01b5ab7c.jpg",
+  },
+  {
+    src: "./assets//socialmediamgt/soc2.jpg",
+  },
+];
+
+let htmlsmmContent = "";
+socialMediaMgt.forEach((pic) => {
+  htmlsmmContent += `
+  
+      <div class="col-5 col-lg-4 col-xl-3 d-flex align-items-center position-relative ads">
+           
+              <img
+                src="${pic.src}"
+                class="img-fluid rounded-4"
+                alt="" loading="lazy" />
+           
+             <a
+              href="${pic.src}"
+              target="_blank"
+              rel="noopener noreferrer">
+            <div class="mg-glass"><i class="fa-solid fa-magnifying-glass-plus"></i>   </div> </a>
+          </div>
+ `;
+});
+document.querySelector("#js-social").innerHTML = htmlsmmContent;

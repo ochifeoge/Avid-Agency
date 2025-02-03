@@ -101,9 +101,11 @@ function loadPage() {
     direction: "horizontal",
     loop: true,
     speed: 500,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
     },
     zoom: {
       enabled: true,
@@ -111,6 +113,21 @@ function loadPage() {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      dynamicBullets: true, // Add this line for better pagination on small screens
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
     },
   });
 
@@ -134,14 +151,6 @@ function loadPage() {
       }, 5000);
     });
   });
-  /*  function resetInputValue() {
-    document.querySelectorAll(".js-form-message").forEach((inputSection) => {
-      inputSection.value = "";
-    });
-  } */
-
-  // Portfolio filter animation
-  // let mixer = mixitup(".portfolio-gallery");
 
   // Scroll animation
   window.addEventListener("scroll", () => {
