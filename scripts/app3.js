@@ -1,9 +1,14 @@
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
 import { apprasials } from "./comments.js";
 function loadPage() {
   // LENTIS SMOOTH SCROLL CODE
+  gsap.registerPlugin(ScrollTrigger);
   const lenis = new Lenis();
 
-  lenis.on("scroll", ScrollTrigger.update);
+  lenis.on("scroll", () => {
+    ScrollTrigger.update();
+  });
   gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
   });
@@ -99,7 +104,7 @@ function loadPage() {
   // SWIPER JS CODE
   const swiper = new Swiper(".swiper", {
     direction: "horizontal",
-    loop: true,
+    loop: false,
     speed: 500,
     slidesPerView: 1,
     slidesPerGroup: 1,
@@ -114,20 +119,6 @@ function loadPage() {
       el: ".swiper-pagination",
       clickable: true,
       dynamicBullets: true, // Add this line for better pagination on small screens
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
     },
   });
 
@@ -224,4 +215,6 @@ function loadPage() {
   });
   document.querySelector(".js-comments").innerHTML = html;
 }
-window.addEventListener("DOMContentLoaded", loadPage);
+window.addEventListener("DOMContentLoaded", () => {
+  loadPage();
+});
