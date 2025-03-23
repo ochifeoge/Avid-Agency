@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.avidgency.com/sitemap.xml
